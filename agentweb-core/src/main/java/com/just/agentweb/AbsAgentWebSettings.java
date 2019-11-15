@@ -35,7 +35,9 @@ public abstract class AbsAgentWebSettings implements IAgentWebSettings, WebListe
 
 	private WebSettings mWebSettings;
 	private static final String TAG = AbsAgentWebSettings.class.getSimpleName();
-	private static final String USERAGENT_AGENTWEB = AgentWebConfig.AGENTWEB_VERSION;
+    public static final String USERAGENT_UC = " UCBrowser/11.6.4.950 ";
+    public static final String USERAGENT_QQ_BROWSER = " MQQBrowser/8.0 ";
+    public static final String USERAGENT_AGENTWEB = AgentWebConfig.AGENTWEB_VERSION;
 	protected AgentWeb mAgentWeb;
 
 
@@ -133,6 +135,7 @@ public abstract class AbsAgentWebSettings implements IAgentWebSettings, WebListe
 		mWebSettings.setUserAgentString(getWebSettings()
 				.getUserAgentString()
 				.concat(USERAGENT_AGENTWEB)
+                .concat(USERAGENT_QQ_BROWSER)
 		);
 
 
